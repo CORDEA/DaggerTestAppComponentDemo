@@ -6,12 +6,16 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class App : Application(), HasAndroidInjector {
+open class App : Application(), HasAndroidInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
     override fun onCreate() {
         super.onCreate()
+        setupDagger()
+    }
+
+    open fun setupDagger() {
         DaggerAppComponent
             .factory()
             .create(this)
