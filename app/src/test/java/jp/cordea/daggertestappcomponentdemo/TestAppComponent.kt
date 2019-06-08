@@ -14,7 +14,7 @@ import javax.inject.Singleton
         RxModule::class,
         ActivityModule::class,
         ReceiverModule::class,
-        HelperModule::class
+        TestHelperModule::class
     ]
 )
 interface TestAppComponent : AppComponent {
