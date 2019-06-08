@@ -13,7 +13,6 @@ import javax.inject.Singleton
         AppModule::class,
         RxModule::class,
         ActivityModule::class,
-        ReceiverModule::class,
         TestHelperModule::class
     ]
 )

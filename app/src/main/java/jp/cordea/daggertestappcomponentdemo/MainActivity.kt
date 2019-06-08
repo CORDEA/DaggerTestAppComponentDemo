@@ -8,8 +8,6 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity() {
     @Inject
-    lateinit var receiver: DemoReceiver
-    @Inject
     lateinit var helper: DemoHelper
     @Inject
     lateinit var context: Context
