@@ -1,6 +1,7 @@
 package jp.cordea.daggertestappcomponentdemo
 
 import android.app.Application
+import androidx.annotation.VisibleForTesting
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -15,6 +16,7 @@ open class App : Application(), HasAndroidInjector {
         setupDagger()
     }
 
+    @VisibleForTesting
     open fun setupDagger() {
         DaggerAppComponent
             .factory()
