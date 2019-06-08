@@ -4,7 +4,7 @@ class TestApp : App() {
     override fun setupDagger() {
         DaggerTestAppComponent
             .factory()
-            .create(this, TestAppModule(), TestRxModule())
+            .create(this, TestRxModule())
             .inject(this)
     }
 }

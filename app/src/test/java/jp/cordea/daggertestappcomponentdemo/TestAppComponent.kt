@@ -10,7 +10,6 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        AppModule::class,
         RxModule::class,
         ActivityModule::class,
         TestHelperModule::class
@@ -21,7 +20,6 @@ interface TestAppComponent : AppComponent {
     interface Factory {
         fun create(
             @BindsInstance application: Application,
-            appModule: AppModule,
             rxModule: RxModule
         ): TestAppComponent
     }
