@@ -47,6 +47,7 @@ dependencies {
     kaptTest "com.google.dagger:dagger-compiler:$dagger_version"
 
     testImplementation 'junit:junit:4.12'
+    testImplementation "com.google.truth:truth:0.45"
     testImplementation 'androidx.test:core:1.2.0'
     testImplementation 'androidx.test:rules:1.2.0'
     testImplementation 'androidx.test:runner:1.2.0'
