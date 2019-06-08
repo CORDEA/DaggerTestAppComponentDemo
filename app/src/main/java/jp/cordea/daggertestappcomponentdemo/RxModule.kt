@@ -10,7 +10,7 @@ import io.reactivex.schedulers.Schedulers
 open class RxModule {
     @Provides
     @IoScheduler
-    open fun provideIoScheduler(): Scheduler = Schedulers.io()
+    fun provideIoScheduler(): Scheduler = Schedulers.io()
 
     @Provides
     @MainScheduler

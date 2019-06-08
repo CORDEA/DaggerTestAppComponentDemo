@@ -18,7 +18,7 @@ class MainActivityTest {
         scenario.moveToState(Lifecycle.State.CREATED)
 
         scenario.onActivity {
-            assertThat(it.ioScheduler).isEqualTo(Schedulers.trampoline())
+            assertThat(it.ioScheduler).isEqualTo(Schedulers.io())
             assertThat(it.mainScheduler).isEqualTo(Schedulers.trampoline())
 
             assertThat(it.helper).isInstanceOf(TestDemoHelperImpl::class.java)
