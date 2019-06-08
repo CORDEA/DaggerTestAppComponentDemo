@@ -7,12 +7,12 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 @Module
-class RxModule {
+open class RxModule {
     @Provides
     @IoScheduler
-    fun provideIoScheduler(): Scheduler = Schedulers.io()
+    open fun provideIoScheduler(): Scheduler = Schedulers.io()
 
     @Provides
     @MainScheduler
-    fun provideMainScheduler(): Scheduler = AndroidSchedulers.mainThread()
+    open fun provideMainScheduler(): Scheduler = AndroidSchedulers.mainThread()
 }

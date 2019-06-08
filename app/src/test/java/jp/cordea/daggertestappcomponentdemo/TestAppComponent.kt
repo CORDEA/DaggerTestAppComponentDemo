@@ -20,6 +20,10 @@ import javax.inject.Singleton
 interface TestAppComponent : AppComponent {
     @Component.Factory
     interface Factory {
-        fun create(@BindsInstance application: Application): TestAppComponent
+        fun create(
+            @BindsInstance application: Application,
+            appModule: AppModule,
+            rxModule: RxModule
+        ): TestAppComponent
     }
 }
